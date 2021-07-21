@@ -1,0 +1,166 @@
+// Custom bootstrap variable overrides
+@import "bootstrap_variable_overrides";
+
+// Bootstrap and its default variables
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Your style
+@import "variables";
+@import "mixins";
+@import "general";
+@import "layout";
+@import "module";
+
+/* CUSTOM STYLES
+-------------------------------------------------- */
+//Smooth Scroll
+html {
+  scroll-behavior: smooth;
+}
+/* Padding below the footer and lighter body text */
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+.l-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #293042;
+  width: 260px;
+  .logo {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 18px 24px;
+    text-align: center;
+    text-decoration: none;
+    img {
+      height: 24px;
+      width: 24px;
+      margin-right: 2px;
+    }
+  }
+}
+.sidebar-nav {
+    list-style: none;
+    padding-left: 0px;
+    .sidebar-title{
+      padding: 24px 24px 6px;
+      font-size: 12px;
+      color: #ced4da;
+      background: transparent;
+    }
+    .sidebar-link{
+      padding: 10px 26px;
+      display: block;
+      color: #e9ecef80;
+      text-decoration: none;
+    }
+    .sidebar-link:hover
+    {
+      color: #e9ecefbf;
+    }
+    .icons{
+      margin-right: 12px;
+    }
+}
+.r-side {
+  padding-left: 260px;
+  background: #f7f9fc;
+  .content {
+    padding: 40px 40px 24px;
+  }
+  h1 {
+    background: #fff;
+    font-size: 24px;
+  }
+  .table {
+    background: #fff;
+  }
+  #bar-main,
+  #pie-main {
+    background: #fff;
+  }
+}
+
+.navbar {
+  padding: 14px 20px;
+  border-bottom: 0;
+  box-shadow: 0 0 24px 0 #2930421a;
+
+  .sidebar-toogle {
+    cursor: pointer;
+    display: flex;
+    height: 26px;
+    width: 26px;
+    .a:hover {
+      color: #3f80ea;
+    }
+    .hamburger {
+      position: relative;
+    }
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      background: #495057;
+      border-radius: 1px;
+      content: "";
+      cursor: pointer;
+      display: block;
+      height: 3px;
+      transition: 0.1s ease-in-out, color 0.1s ease-in-out;
+      width: 24px;
+    }
+    .hamburger::before {
+      position: absolute;
+      top: -8px;
+      width: 20px;
+    }
+    .hamburger::after {
+      position: absolute;
+      bottom: -8px;
+      width: 16px;
+    }
+  }
+  .input-group {
+    max-width: 240px;
+    background: #f3f6fb;
+    .search {
+      border: none;
+      background: #f3f6fb;
+    }
+  }
+  .dropdown {
+    img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+    .userName{
+      color: #293042;
+      font-size: 13px;
+    }
+  }
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: auto;
+  }
+}
+
+.card-head {
+  background: #fff;
+  border: none;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */

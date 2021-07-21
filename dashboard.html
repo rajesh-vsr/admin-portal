@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Bootstrap 5 Template</title>
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/img/favicons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template with bootstrap css -->
+    <!-- build:css -->
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/fonts/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- endbuild -->
+</head>
+
+<body class="pt-0">
+    <div class="l-side">
+        <a class="logo" href="index.html">
+            <img src="assets/img/android-chrome-512x512.png" alt="logo">
+            <span class="align-middle me-3">TAMS</span>
+        </a>
+        <ul class="sidebar-nav">
+            <li class="sidebar-title">Pages</li>
+            <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html"><i class="bi bi-people-fill icons"></i><span>Manager</span></a></li>
+            <!-- Navigation</br>
+        <li>Admin</li></br>
+        <li>Locations</li></br>
+        <li></li></br>
+        <li>Technician</li></br> -->
+
+            <li><a class="sidebar-link" href="index.html">Login</a></li>
+            <li><a class="sidebar-link" href="sign-up.html">Sign Up</a></li>
+        </ul>
+    </div>
+    <div class="r-side">
+        <div class="container">
+            <div class="row">
+                <div class="navbar ps-0">
+                    <div class="col-1">
+                        <a href="#" class="sidebar-toogle ms-3">
+                            <i class="hamburger align-self-center"></i>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <form class="search-box">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control search" placeholder="Search tickets"
+                                    aria-label="Search tickets" aria-describedby="searchButton">
+                                <button class="btn" type="button" id="searchButton">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-5">
+                        <div class="dropdown d-flex justify-content-end">
+                            <a class="btn dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="assets/img/bwpotrait.jpeg" alt="User image">
+                                <span class="userName">Rajesh S</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><button class="dropdown-item" type="button">View Profile</button></li>
+                                <li><button class="dropdown-item" type="button">Edit Profile</button></li>
+                                <li><button class="dropdown-item" type="button">Logout</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-7 mt-4">
+                        <div class="card">
+                            <div class="card-header card-head">
+                                <div class="d-flex justify-content-between">
+                                    <h1 class="card-title text-left">Technician Details</h1>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#addnewuserModal">
+                                        Add New User
+                                    </button>
+                                </div>
+                                <!-- Modal box for adding new user-->
+                                <div class="modal fade" id="addnewuserModal" tabindex="-1"
+                                    aria-labelledby="eaddnewuserModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="addnewuserModalLabel">Add new user</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="post">
+                                                    <div class="mb-2">
+                                                        <label for="nameInput" class="form-label">Name</label>
+                                                        <input type="text" class="form-control" id="nameInput"
+                                                            placeholder="Name">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="empIdInput" class="form-label">Employee ID</label>
+                                                        <input type="text" class="form-control" id="empIdInput"
+                                                            placeholder="Employee ID">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="skillsetInput" class="form-label">Skilset</label>
+                                                        <input class="form-control" list="skillsetOptions"
+                                                            id="skillsetInput" placeholder="Type to search...">
+                                                        <datalist id="skillsetOptions">
+                                                            <option value="Networking">
+                                                            <option value="Hardware">
+                                                            <option value="Electrician">
+                                                            <option value="Television">
+                                                            <option value="AC">
+                                                        </datalist>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="expInput" class="form-label">Experience</label>
+                                                        <input class="form-control" list="expOptions" id="expInput"
+                                                            placeholder="Type to search...">
+                                                        <datalist id="expOptions">
+                                                            <option value="1 - 2 Years">
+                                                            <option value="2 - 5 Years">
+                                                            <option value="5 - 8 Years">
+                                                            <option value="8 - 10 Years">
+                                                            <option value="10+ Years">
+                                                        </datalist>
+                                                    </div>
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="card-text"></p>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <table class="table">
+                                        <tr>
+                                            <th>S.No</th>
+                                            <th>Name</th>
+                                            <th>Employeed ID</th>
+                                            <th>Skillset</th>
+                                            <th>Experience</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        <tr>
+                                            <td>10201</td>
+                                            <td>Vishva</td>
+                                            <td>639180</td>
+                                            <td>Networking</td>
+                                            <td>2 Yrs</td>
+                                            <td><a href="#"><i class="bi bi-pencil"></i></a> <a href="#"><i
+                                                        class="bi bi-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10202</td>
+                                            <td>Kannan</td>
+                                            <td>639182</td>
+                                            <td>Hardware</td>
+                                            <td>4 Yrs</td>
+                                            <td><a href="#"><i class="bi bi-pencil"></i></a> <a href="#"><i
+                                                        class="bi bi-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10203</td>
+                                            <td>Aravind</td>
+                                            <td>639185</td>
+                                            <td>Electrician</td>
+                                            <td>8 Yrs</td>
+                                            <td><a href="#"><i class="bi bi-pencil"></i></a> <a href="#"><i
+                                                        class="bi bi-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10204</td>
+                                            <td>Deb</td>
+                                            <td>639187</td>
+                                            <td>Television</td>
+                                            <td>1 Yr</td>
+                                            <td><a href="#"><i class="bi bi-pencil"></i></a> <a href="#"><i
+                                                        class="bi bi-trash"></i></a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 mt-5">
+                        <div class="card">
+                            <div class="card-header card-head">
+                                <h5 class="card-title">Technician Details</h5>
+                                <p class="card-text">Tickets count from each Technicians.</p>
+                            </div>
+                            <div class="card-body">
+                                <div id="bar-main" style="width: 600px;height:400px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mt-5">
+                        <div class="card-header card-head">
+                            <h5 class="card-title">Technician Details</h5>
+                            <p class="card-text">Tickets count from each Technicians.</p>
+                        </div>
+                        <div class="card-body">
+                            <div id="pie-main" style="width: 600px;height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Javascript -->
+    <script src="assets/js/vendor/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/vendor/echarts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // based on prepared DOM, initialize echarts instance
+        var myChart = echarts.init(document.getElementById('bar-main'));
+
+        // specify chart configuration item and data
+        var option = {
+            tooltip: {},
+            legend: {
+                data: ['Service Tickets'],
+                left: 'left'
+            },
+            xAxis: {
+                data: ["Kannan", "Aravind", "Deb", "Vishva"]
+            },
+            yAxis: {},
+            series: [{
+                name: 'Service Tickets',
+                type: 'bar',
+                data: [5, 20, 36, 10]
+            }]
+        };
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+    </script>
+    <script type="text/javascript">
+        // based on prepared DOM, initialize echarts instance
+        var myChart = echarts.init(document.getElementById('pie-main'));
+
+        // specify chart configuration item and data
+        var option = {
+            title: {
+                text: 'Tickets Count',
+                subtext: 'From Each Technicians',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                // orient: 'vertical',
+                // left: 'left',
+                bottom: 'bottom'
+            },
+            series: [
+                {
+                    name: 'Technician',
+                    type: 'pie',
+                    radius: '50%',
+                    data: [
+                        { value: 94, name: 'Vishva' },
+                        { value: 50, name: 'Kenny' },
+                        { value: 75, name: 'Mike' },
+                        { value: 95, name: 'Aravind' },
+                        { value: 45, name: 'Shikar' }
+                    ],
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+    </script>
+    <!-- Custom Javascript -->
+    <!-- build:js -->
+    <script src="assets/js/app.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
