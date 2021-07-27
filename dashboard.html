@@ -28,13 +28,12 @@
         </a>
         <ul class="sidebar-nav">
             <li class="sidebar-title">Pages</li>
-            <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html"><i class="bi bi-people-fill icons"></i><span>Manager</span></a></li>
-            <!-- Navigation</br>
-        <li>Admin</li></br>
-        <li>Locations</li></br>
-        <li></li></br>
-        <li>Technician</li></br> -->
-
+            <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html"><i
+                        class="bi bi-people-fill icons"></i><span>Dashboard</span></a></li>
+            <li><a class="sidebar-link" href="org-admin.html">Admin (Organisation)</a></li>
+            <li><a class="sidebar-link" href="locations.html">Locations</a></li>
+            <li><a class="sidebar-link" href="manager.html">Manager</a></li>
+            <li><a class="sidebar-link" href="technician.html">Technicians</a></li>
             <li><a class="sidebar-link" href="index.html">Login</a></li>
             <li><a class="sidebar-link" href="sign-up.html">Sign Up</a></li>
         </ul>
@@ -89,60 +88,6 @@
                                         Add New User
                                     </button>
                                 </div>
-                                <!-- Modal box for adding new user-->
-                                <div class="modal fade" id="addnewuserModal" tabindex="-1"
-                                    aria-labelledby="eaddnewuserModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="addnewuserModalLabel">Add new user</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form action="post">
-                                                    <div class="mb-2">
-                                                        <label for="nameInput" class="form-label">Name</label>
-                                                        <input type="text" class="form-control" id="nameInput"
-                                                            placeholder="Name">
-                                                    </div>
-                                                    <div class="mb-2">
-                                                        <label for="empIdInput" class="form-label">Employee ID</label>
-                                                        <input type="text" class="form-control" id="empIdInput"
-                                                            placeholder="Employee ID">
-                                                    </div>
-                                                    <div class="mb-2">
-                                                        <label for="skillsetInput" class="form-label">Skilset</label>
-                                                        <input class="form-control" list="skillsetOptions"
-                                                            id="skillsetInput" placeholder="Type to search...">
-                                                        <datalist id="skillsetOptions">
-                                                            <option value="Networking">
-                                                            <option value="Hardware">
-                                                            <option value="Electrician">
-                                                            <option value="Television">
-                                                            <option value="AC">
-                                                        </datalist>
-                                                    </div>
-                                                    <div class="mb-2">
-                                                        <label for="expInput" class="form-label">Experience</label>
-                                                        <input class="form-control" list="expOptions" id="expInput"
-                                                            placeholder="Type to search...">
-                                                        <datalist id="expOptions">
-                                                            <option value="1 - 2 Years">
-                                                            <option value="2 - 5 Years">
-                                                            <option value="5 - 8 Years">
-                                                            <option value="8 - 10 Years">
-                                                            <option value="10+ Years">
-                                                        </datalist>
-                                                    </div>
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-primary">Save changes</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <p class="card-text"></p>
                             </div>
                             <div class="card-body">
@@ -162,8 +107,12 @@
                                             <td>639180</td>
                                             <td>Networking</td>
                                             <td>2 Yrs</td>
-                                            <td><a href="#"><i class="bi bi-pencil"></i></a> <a href="#"><i
-                                                        class="bi bi-trash"></i></a></td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
+                                                    <i class="bi bi-pencil"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
+                                                    <i class="bi bi-trash"></i></a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>10202</td>
@@ -171,8 +120,12 @@
                                             <td>639182</td>
                                             <td>Hardware</td>
                                             <td>4 Yrs</td>
-                                            <td><a href="#"><i class="bi bi-pencil"></i></a> <a href="#"><i
-                                                        class="bi bi-trash"></i></a></td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
+                                                    <i class="bi bi-pencil"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
+                                                    <i class="bi bi-trash"></i></a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>10203</td>
@@ -180,8 +133,12 @@
                                             <td>639185</td>
                                             <td>Electrician</td>
                                             <td>8 Yrs</td>
-                                            <td><a href="#"><i class="bi bi-pencil"></i></a> <a href="#"><i
-                                                        class="bi bi-trash"></i></a></td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
+                                                    <i class="bi bi-pencil"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
+                                                    <i class="bi bi-trash"></i></a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>10204</td>
@@ -189,12 +146,144 @@
                                             <td>639187</td>
                                             <td>Television</td>
                                             <td>1 Yr</td>
-                                            <td><a href="#"><i class="bi bi-pencil"></i></a> <a href="#"><i
-                                                        class="bi bi-trash"></i></a></td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
+                                                    <i class="bi bi-pencil"></i></a>
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
+                                                    <i class="bi bi-trash"></i></a>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal box for adding new user-->
+            <div class="modal fade" id="addnewuserModal" tabindex="-1" aria-labelledby="eaddnewuserModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addnewuserModalLabel">Add new user</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="post">
+                                <div class="mb-2">
+                                    <label for="nameInput" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="nameInput" placeholder="Name">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="empIdInput" class="form-label">Employee ID</label>
+                                    <input type="text" class="form-control" id="empIdInput" placeholder="Employee ID">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="skillsetInput" class="form-label">Skilset</label>
+                                    <input class="form-control" list="skillsetOptions" id="skillsetInput"
+                                        placeholder="Type to search...">
+                                    <datalist id="skillsetOptions">
+                                        <option value="Networking">
+                                        <option value="Hardware">
+                                        <option value="Electrician">
+                                        <option value="Television">
+                                        <option value="AC">
+                                    </datalist>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="expInput" class="form-label">Experience</label>
+                                    <input class="form-control" list="expOptions" id="expInput"
+                                        placeholder="Type to search...">
+                                    <datalist id="expOptions">
+                                        <option value="1 - 2 Years">
+                                        <option value="2 - 5 Years">
+                                        <option value="5 - 8 Years">
+                                        <option value="8 - 10 Years">
+                                        <option value="10+ Years">
+                                    </datalist>
+                                </div>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal box for editing existing user-->
+
+            <div class="modal fade" id="editUser" tabindex="-1" aria-labelledby="editUserLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editUserLabel">Update user Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="post">
+                                <div class="mb-2">
+                                    <label for="nameInput" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="nameInput" placeholder="Name" disabled
+                                        readonly>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="empIdInput" class="form-label">Employee ID</label>
+                                    <input type="text" class="form-control" id="empIdInput" placeholder="Employee ID"
+                                        disabled readonly>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="skillsetInput" class="form-label">Skilset</label>
+                                    <input class="form-control" list="skillsetOptions" id="skillsetInput"
+                                        placeholder="Type to search...">
+                                    <datalist id="skillsetOptions">
+                                        <option value="Networking">
+                                        <option value="Hardware">
+                                        <option value="Electrician">
+                                        <option value="Television">
+                                        <option value="AC">
+                                    </datalist>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="expInput" class="form-label">Experience</label>
+                                    <input class="form-control" list="expOptions" id="expInput"
+                                        placeholder="Type to search...">
+                                    <datalist id="expOptions">
+                                        <option value="1 - 2 Years">
+                                        <option value="2 - 5 Years">
+                                        <option value="5 - 8 Years">
+                                        <option value="8 - 10 Years">
+                                        <option value="10+ Years">
+                                    </datalist>
+                                </div>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal box for deleting existing user-->
+
+            <div class="modal fade" id="deleteUser" tabindex="-1" aria-labelledby="deleteUserLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteUserLabel">Warning!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row">
+                                <div class="col-auto">
+                                    <label for="deletingUser">Are you Sure to delete user '...'?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                                    </button>
+                                    <button type="submit" class="btn btn-primary">Delete</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -213,12 +302,36 @@
                         </div>
                     </div>
                     <div class="col-6 mt-5">
-                        <div class="card-header card-head">
-                            <h5 class="card-title">Technician Details</h5>
-                            <p class="card-text">Tickets count from each Technicians.</p>
+                        <div class="card">
+                            <div class="card-header card-head">
+                                <h5 class="card-title">Technician Details</h5>
+                                <p class="card-text">Tickets count from each Technicians.</p>
+                            </div>
+                            <div class="card-body">
+                                <div id="pie-main" style="width: 600px;height:400px;"></div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div id="pie-main" style="width: 600px;height:400px;"></div>
+                    </div>
+                    <div class="col-6 mt-5">
+                        <div class="card">
+                            <div class="card-header card-head">
+                                <h5 class="card-title">Technician Details</h5>
+                                <p class="card-text">Tickets count from each Technicians.</p>
+                            </div>
+                            <div class="card-body">
+                                <div id="donut-main" style="width: 600px;height:400px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mt-5">
+                        <div class="card">
+                            <div class="card-header card-head">
+                                <h5 class="card-title">Technician's Quaterly ticket counts</h5>
+                                <p class="card-text">Tickets count from each Technicians - Quaterly.</p>
+                            </div>
+                            <div class="card-body">
+                                <div id="line-main" style="width: 600px;height:400px;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -231,10 +344,13 @@
     <script src="assets/js/vendor/echarts.js" type="text/javascript"></script>
     <script type="text/javascript">
         // based on prepared DOM, initialize echarts instance
-        var myChart = echarts.init(document.getElementById('bar-main'));
+        var myBarChart = echarts.init(document.getElementById('bar-main'));
+        var myPieChart = echarts.init(document.getElementById('pie-main'));
+        var myDonutChart = echarts.init(document.getElementById('donut-main'));
+        var myLineChart = echarts.init(document.getElementById('line-main'));
 
-        // specify chart configuration item and data
-        var option = {
+        // Bar-chart item and data
+        var optionBar = {
             tooltip: {},
             legend: {
                 data: ['Service Tickets'],
@@ -250,20 +366,11 @@
                 data: [5, 20, 36, 10]
             }]
         };
-        // use configuration item and data specified to show chart
-        myChart.setOption(option);
-    </script>
-    <script type="text/javascript">
-        // based on prepared DOM, initialize echarts instance
-        var myChart = echarts.init(document.getElementById('pie-main'));
+        // use configuration item and data specified to show Bar-chart
+        myBarChart.setOption(optionBar);
 
-        // specify chart configuration item and data
-        var option = {
-            title: {
-                text: 'Tickets Count',
-                subtext: 'From Each Technicians',
-                left: 'center'
-            },
+        // Pie-chart item and data
+        var optionPie = {
             tooltip: {
                 trigger: 'item'
             },
@@ -295,7 +402,120 @@
             ]
         };
         // use configuration item and data specified to show chart
-        myChart.setOption(option);
+        myPieChart.setOption(optionPie);
+
+        // Donut-chart item and data
+        var optionDonut = {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                top: '5%',
+                left: 'center'
+            },
+            series: [
+                {
+                    name: 'Technician',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    itemStyle: {
+                        borderRadius: 10,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    data: [
+                        { value: 94, name: 'Vishva' },
+                        { value: 50, name: 'Kenny' },
+                        { value: 75, name: 'Mike' },
+                        { value: 95, name: 'Aravind' },
+                        { value: 45, name: 'Shikar' }
+                    ],
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '40',
+                            fontWeight: 'bold'
+                        }
+                    }
+                }
+            ]
+        };
+        // use configuration item and data specified to show chart
+        myDonutChart.setOption(optionDonut);
+
+        // Line-chart item and data
+        var optionLine = {
+            title: {
+                text: 'Ex Text'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['Vishva', 'Kenny', 'Mike', 'Patel', 'Kumar']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            // toolbox: {
+            //     feature: {
+            //         saveAsImage: {}
+            //     }
+            // },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Q2,20"', 'Q3,20"', 'Q4,20"', 'Q1,21"', 'Q2,21"']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: 'Vishva',
+                    type: 'line',
+                    stack: 'line',
+                    data: [120, 132, 101, 230, 210]
+                },
+                {
+                    name: 'Kenny',
+                    type: 'line',
+                    stack: 'line',
+                    data: [250, 182, 291, 1330, 310]
+                },
+                {
+                    name: 'Mike',
+                    type: 'line',
+                    stack: 'line',
+                    data: [150, 232, 201, 330, 410]
+                },
+                {
+                    name: 'Patel',
+                    type: 'line',
+                    stack: 'line',
+                    data: [320, 332, 401, 330, 320]
+                },
+                {
+                    name: 'Kumar',
+                    type: 'line',
+                    stack: 'line',
+                    data: [820, 932, 901, 1330, 1320]
+                }
+            ]
+        };
+        // use configuration item and data specified to show chart
+        myLineChart.setOption(optionLine);
+
     </script>
     <!-- Custom Javascript -->
     <!-- build:js -->

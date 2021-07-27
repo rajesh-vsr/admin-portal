@@ -50,27 +50,26 @@ body {
   }
 }
 .sidebar-nav {
-    list-style: none;
-    padding-left: 0px;
-    .sidebar-title{
-      padding: 24px 24px 6px;
-      font-size: 12px;
-      color: #ced4da;
-      background: transparent;
-    }
-    .sidebar-link{
-      padding: 10px 26px;
-      display: block;
-      color: #e9ecef80;
-      text-decoration: none;
-    }
-    .sidebar-link:hover
-    {
-      color: #e9ecefbf;
-    }
-    .icons{
-      margin-right: 12px;
-    }
+  list-style: none;
+  padding-left: 0px;
+  .sidebar-title {
+    padding: 24px 24px 6px;
+    font-size: 12px;
+    color: #ced4da;
+    background: transparent;
+  }
+  .sidebar-link {
+    padding: 10px 26px;
+    display: block;
+    color: #e9ecef80;
+    text-decoration: none;
+  }
+  .sidebar-link:hover {
+    color: #e9ecefbf;
+  }
+  .icons {
+    margin-right: 12px;
+  }
 }
 .r-side {
   padding-left: 260px;
@@ -89,12 +88,26 @@ body {
   #pie-main {
     background: #fff;
   }
+  .page-link {
+    border: 1px solid #dee6ed;
+    color: #6c757d;
+  }
+  .page-link:hover {
+    background-color: #e2e8ee;
+    border-color: #dee6ed;
+    color: #020202;
+    text-decoration: none;
+    z-index: 2;
+  }
 }
 
 .navbar {
   padding: 14px 20px;
+  background: #fff;
   border-bottom: 0;
   box-shadow: 0 0 24px 0 #2930421a;
+  justify-content: flex-start;
+  align-content: center;
 
   .sidebar-toogle {
     cursor: pointer;
@@ -144,7 +157,7 @@ body {
       width: 40px;
       border-radius: 50%;
     }
-    .userName{
+    .userName {
       color: #293042;
       font-size: 13px;
     }
@@ -156,11 +169,12 @@ body {
   }
 }
 
-.card-head {
+.card-head,
+.card-body,
+.card-footer {
   background: #fff;
   border: none;
 }
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
