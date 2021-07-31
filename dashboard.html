@@ -28,53 +28,48 @@
         </a>
         <ul class="sidebar-nav">
             <li class="sidebar-title">Pages</li>
-            <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html"><i
-                        class="bi bi-people-fill icons"></i><span>Dashboard</span></a></li>
-            <li><a class="sidebar-link" href="org-admin.html">Admin (Organisation)</a></li>
-            <li><a class="sidebar-link" href="locations.html">Locations</a></li>
-            <li><a class="sidebar-link" href="manager.html">Manager</a></li>
-            <li><a class="sidebar-link" href="technician.html">Technicians</a></li>
-            <li><a class="sidebar-link" href="index.html">Login</a></li>
-            <li><a class="sidebar-link" href="sign-up.html">Sign Up</a></li>
+            <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html">
+                    <i class="bi bi-file-earmark-bar-graph icons"></i><span>Dashboard</span></a></li>
+            <li><a class="sidebar-link" href="org-admin.html"><i class="bi bi-person-lines-fill icons"></i>
+                    <span>Admin (Organisation)</span></a></li>
+            <li><a class="sidebar-link" href="locations.html"><i class="bi bi-geo-fill icons"></i>
+                    <span>Locations</span></a></li>
+            <li class="sidebar-item active"><a class="sidebar-link" href="manager.html">
+                    <i class="bi bi-person icons"></i><span>Manager</span></a></li>
+            <li><a class="sidebar-link" href="technician.html"><i class="bi bi-tools icons"></i>
+                    <span>Technicians</span></a>
+            </li>
+            <!-- <li><a class="sidebar-link" href="index.html">Login</a></li>
+            <li><a class="sidebar-link" href="sign-up.html">Sign Up</a></li> -->
         </ul>
     </div>
     <div class="r-side">
-        <div class="container">
-            <div class="row">
-                <div class="navbar ps-0">
-                    <div class="col-1">
-                        <a href="#" class="sidebar-toogle ms-3">
-                            <i class="hamburger align-self-center"></i>
-                        </a>
-                    </div>
-                    <div class="col-6">
-                        <form class="search-box">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control search" placeholder="Search tickets"
-                                    aria-label="Search tickets" aria-describedby="searchButton">
-                                <button class="btn" type="button" id="searchButton">
-                                    <i class="bi bi-search"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-5">
-                        <div class="dropdown d-flex justify-content-end">
-                            <a class="btn dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="assets/img/bwpotrait.jpeg" alt="User image">
-                                <span class="userName">Rajesh S</span>
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li><button class="dropdown-item" type="button">View Profile</button></li>
-                                <li><button class="dropdown-item" type="button">Edit Profile</button></li>
-                                <li><button class="dropdown-item" type="button">Logout</button></li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="navbar d-flex">
+            <a href="#" class="sidebar-toogle me-3">
+                <i class="hamburger align-self-center"></i>
+            </a>
+            <form class="search-box">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control search" placeholder="Search tickets"
+                        aria-label="Search tickets" aria-describedby="searchButton">
+                    <button class="btn" type="button" id="searchButton">
+                        <i class="bi bi-search"></i>
+                    </button>
                 </div>
+            </form>
+            <div class="dropdown d-flex justify-content-end">
+                <a class="btn dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="user-img" src="assets/img/bwpotrait.jpeg" alt="User image">
+                    <span class="userName">Rajesh S</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">View Profile</button></li>
+                    <li><button class="dropdown-item" type="button">Edit Profile</button></li>
+                    <li><button class="dropdown-item" type="button">Logout</button></li>
+                </ul>
             </div>
-        </div>
+    </div>
         <div class="content">
             <div class="container">
                 <div class="row">
@@ -93,7 +88,7 @@
                             <div class="card-body">
                                 <div>
                                     <table class="table">
-                                        <tr>
+                                        <tr class="tb-header">
                                             <th>S.No</th>
                                             <th>Name</th>
                                             <th>Employeed ID</th>
@@ -107,7 +102,7 @@
                                             <td>639180</td>
                                             <td>Networking</td>
                                             <td>2 Yrs</td>
-                                            <td>
+                                            <td class="table-action">
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
                                                     <i class="bi bi-pencil"></i></a>
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
@@ -120,7 +115,7 @@
                                             <td>639182</td>
                                             <td>Hardware</td>
                                             <td>4 Yrs</td>
-                                            <td>
+                                            <td class="table-action">
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
                                                     <i class="bi bi-pencil"></i></a>
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
@@ -133,7 +128,7 @@
                                             <td>639185</td>
                                             <td>Electrician</td>
                                             <td>8 Yrs</td>
-                                            <td>
+                                            <td class="table-action">
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
                                                     <i class="bi bi-pencil"></i></a>
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
@@ -146,7 +141,7 @@
                                             <td>639187</td>
                                             <td>Television</td>
                                             <td>1 Yr</td>
-                                            <td>
+                                            <td class="table-action">
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
                                                     <i class="bi bi-pencil"></i></a>
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
@@ -297,7 +292,7 @@
                                 <p class="card-text">Tickets count from each Technicians.</p>
                             </div>
                             <div class="card-body">
-                                <div id="bar-main" style="width: 600px;height:400px;"></div>
+                                <div id="bar-main" style="height:400px;"></div>
                             </div>
                         </div>
                     </div>
@@ -308,7 +303,7 @@
                                 <p class="card-text">Tickets count from each Technicians.</p>
                             </div>
                             <div class="card-body">
-                                <div id="pie-main" style="width: 600px;height:400px;"></div>
+                                <div id="pie-main" style="height:400px;"></div>
                             </div>
                         </div>
                     </div>
@@ -319,7 +314,7 @@
                                 <p class="card-text">Tickets count from each Technicians.</p>
                             </div>
                             <div class="card-body">
-                                <div id="donut-main" style="width: 600px;height:400px;"></div>
+                                <div id="donut-main" style="height:400px;"></div>
                             </div>
                         </div>
                     </div>
@@ -330,7 +325,7 @@
                                 <p class="card-text">Tickets count from each Technicians - Quaterly.</p>
                             </div>
                             <div class="card-body">
-                                <div id="line-main" style="width: 600px;height:400px;"></div>
+                                <div id="line-main" style="height:400px;"></div>
                             </div>
                         </div>
                     </div>
