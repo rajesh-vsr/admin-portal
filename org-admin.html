@@ -20,7 +20,7 @@
     <!-- endbuild -->
 </head>
 
-<body class="pt-0">
+<body class="p-0">
     <div class="l-side">
         <a class="logo" href="index.html">
             <img src="assets/img/android-chrome-512x512.png" alt="logo">
@@ -30,11 +30,11 @@
             <li class="sidebar-title">Pages</li>
             <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html">
                     <i class="bi bi-file-earmark-bar-graph icons"></i><span>Dashboard</span></a></li>
-            <li><a class="sidebar-link" href="org-admin.html"><i class="bi bi-person-lines-fill icons"></i>
+            <li><a class="sidebar-link active" href="org-admin.html"><i class="bi bi-person-lines-fill icons"></i>
                     <span>Admin (Organisation)</span></a></li>
             <li><a class="sidebar-link" href="locations.html"><i class="bi bi-geo-fill icons"></i>
                     <span>Locations</span></a></li>
-            <li class="sidebar-item active"><a class="sidebar-link" href="manager.html">
+            <li class="sidebar-item"><a class="sidebar-link" href="manager.html">
                     <i class="bi bi-person icons"></i><span>Manager</span></a></li>
             <li><a class="sidebar-link" href="technician.html"><i class="bi bi-tools icons"></i>
                     <span>Technicians</span></a>
@@ -58,26 +58,205 @@
                 </div>
             </form>
             <div class="dropdown d-flex justify-content-end">
-                <a class="btn dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <a class="btn btn-navbar dropdown-toggle" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
                     <img class="user-img" src="assets/img/bwpotrait.jpeg" alt="User image">
                     <span class="userName">Rajesh S</span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><button class="dropdown-item" type="button">View Profile</button></li>
-                    <li><button class="dropdown-item" type="button">Edit Profile</button></li>
-                    <li><button class="dropdown-item" type="button">Logout</button></li>
+                    <li><a href="#" class="dropdown-item" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-user align-middle me-1">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>View Profile</a></li>
+                    <li><a href="#" class="dropdown-item" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-edit align-middle me-1">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                            Edit Profile</a></li>
+                    <li><a href="index.html" class="dropdown-item" type="button"><svg viewBox="0 0 24 24" width="24"
+                                height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-logout align-middle me-1">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>Logout</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-4">
+                        <div class="card">
+                            <div class="card-header card-head">
+                                <div class="d-flex justify-content-between">
+                                    <h1 class="card-title text-left">Organisation Details</h1>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#addnewOrgModal">
+                                        Add New Organisation
+                                    </button>
+                                </div>
+                                <p class="card-text"></p>
+                            </div>
+                            <div class="card-body px-0">
+                                <div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr class="tb-header">
+                                                <th>Organisation ID</th>
+                                                <th>Organisation Name</th>
+                                                <th>Email-Id</th>
+                                                <th>Phone No.</th>
+                                                <th>Created On</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd">
+                                                <td>101</td>
+                                                <td>Encore Software Services</td>
+                                                <td>org@ess.com</td>
+                                                <td>+91 1234567890</td>
+                                                <td>03/20/2017</td>
+                                            </tr>
+                                            <tr class="even">
+                                                <td>102</td>
+                                                <td>Tata Consultancy </td>
+                                                <td>org@tcs.com</td>
+                                                <td>+91 6165498515</td>
+                                                <td>01/01/2010</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td>103</td>
+                                                <td>Wipro</td>
+                                                <td>org@wipro.com</td>
+                                                <td>+91 9514873219</td>
+                                                <td>01/01/2009</td>
+                                            </tr>
+                                            <tr class="even">
+                                                <td>104</td>
+                                                <td>Tech Mahindra</td>
+                                                <td>org@tmahindra.com</td>
+                                                <td>+91 4658154975</td>
+                                                <td>01/01/1999</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td>105</td>
+                                                <td>DXC</td>
+                                                <td>org@dxc.com</td>
+                                                <td>+91 5147564821</td>
+                                                <td>01/01/2005</td>
+                                            </tr>
+                                            <tr class="even">
+                                                <td>106</td>
+                                                <td>Cognizant</td>
+                                                <td>org@cts.com</td>
+                                                <td>+91 5165489565</td>
+                                                <td>01/01/2006</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="d-flex card-footer justify-content-end">
+                                <nav aria-label="...">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1"
+                                                aria-disabled="true">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active" aria-current="page">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal box for adding new Organisation-->
+            <div class="modal fade" id="addnewOrgModal" tabindex="-1" aria-labelledby="addnewOrgModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addnewOrgModalLabel">Add new Organisation</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="post">
+                                <div class="mb-2">
+                                    <label for="orgIdInput" class="form-label">Organisation ID</label>
+                                    <input type="text" class="form-control" id="empIdInput"
+                                        placeholder="Organisation ID">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="orgNameInput" class="form-label">Organisation Name</label>
+                                    <input type="text" class="form-control" id="nameInput"
+                                        placeholder="Organisation Name">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="email-address" class="form-label">Organisation Email ID</label>
+                                    <input type="email" class="form-control" id="email-address"
+                                        placeholder="Enter Organisation Mail">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="phNoInput" class="form-label">Organisation Phone No.</label>
+                                    <input type="nunber" class="form-control" id="phNoInput"
+                                        placeholder="Organisation Phone No.">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="createDateInput" class="form-label">Created On</label>
+                                    <input type="date" class="form-control" id="createDateInput"
+                                        placeholder="Organisation Created On">
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row text-muted">
+                    <div class="col-6">
+                        <ul class="list-nostyle">
+                            <li class="list-nostyle-item"><a class="text-muted" href="#">Support</a></li>
+                            <li class="list-nostyle-item"><a class="text-muted" href="#">Help Center</a></li>
+                            <li class="list-nostyle-item"><a class="text-muted" href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 text-end">
+                        <p class="mb-0">
+                            &#169; 2021 - <a href="index.html" class="text-muted">TAMS</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-     <!-- Bootstrap 5 Javascript -->
-     <script src="assets/js/vendor/bootstrap.bundle.min.js" type="text/javascript"></script>
-     <script src="assets/js/vendor/echarts.js" type="text/javascript"></script>
-      <!-- Custom Javascript -->
-     <!-- build:js -->
-     <script src="assets/js/app.js"></script>
-     <!-- endbuild -->
+    <!-- Bootstrap 5 Javascript -->
+    <script src="assets/js/vendor/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/vendor/echarts.js" type="text/javascript"></script>
+    <!-- Custom Javascript -->
+    <!-- build:js -->
+    <script src="assets/js/app.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>

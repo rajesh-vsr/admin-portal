@@ -20,7 +20,7 @@
     <!-- endbuild -->
 </head>
 
-<body class="pt-0">
+<body class="p-0">
     <div class="l-side">
         <a class="logo" href="index.html">
             <img src="assets/img/android-chrome-512x512.png" alt="logo">
@@ -28,13 +28,13 @@
         </a>
         <ul class="sidebar-nav">
             <li class="sidebar-title">Pages</li>
-            <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html">
+            <li class="sidebar-item"><a class="sidebar-link active" href="dashboard.html">
                     <i class="bi bi-file-earmark-bar-graph icons"></i><span>Dashboard</span></a></li>
             <li><a class="sidebar-link" href="org-admin.html"><i class="bi bi-person-lines-fill icons"></i>
                     <span>Admin (Organisation)</span></a></li>
             <li><a class="sidebar-link" href="locations.html"><i class="bi bi-geo-fill icons"></i>
                     <span>Locations</span></a></li>
-            <li class="sidebar-item active"><a class="sidebar-link" href="manager.html">
+            <li class="sidebar-item"><a class="sidebar-link" href="manager.html">
                     <i class="bi bi-person icons"></i><span>Manager</span></a></li>
             <li><a class="sidebar-link" href="technician.html"><i class="bi bi-tools icons"></i>
                     <span>Technicians</span></a>
@@ -58,22 +58,39 @@
                 </div>
             </form>
             <div class="dropdown d-flex justify-content-end">
-                <a class="btn dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <a class="btn btn-navbar dropdown-toggle" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
                     <img class="user-img" src="assets/img/bwpotrait.jpeg" alt="User image">
                     <span class="userName">Rajesh S</span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><button class="dropdown-item" type="button">View Profile</button></li>
-                    <li><button class="dropdown-item" type="button">Edit Profile</button></li>
-                    <li><button class="dropdown-item" type="button">Logout</button></li>
+                    <li><a href="#" class="dropdown-item" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-user align-middle me-1">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>View Profile</a></li>
+                    <li><a href="#" class="dropdown-item" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-edit align-middle me-1">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                            Edit Profile</a></li>
+                    <li><a href="index.html" class="dropdown-item" type="button"><svg viewBox="0 0 24 24" width="24"
+                                height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-logout align-middle me-1">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>Logout</a></li>
                 </ul>
             </div>
-    </div>
+        </div>
         <div class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-7 mt-4">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-header card-head">
                                 <div class="d-flex justify-content-between">
@@ -176,15 +193,14 @@
                                 </div>
                                 <div class="mb-2">
                                     <label for="skillsetInput" class="form-label">Skilset</label>
-                                    <input class="form-control" list="skillsetOptions" id="skillsetInput"
-                                        placeholder="Type to search...">
-                                    <datalist id="skillsetOptions">
-                                        <option value="Networking">
-                                        <option value="Hardware">
-                                        <option value="Electrician">
-                                        <option value="Television">
-                                        <option value="AC">
-                                    </datalist>
+                                    <select id="skillsetOptions" class="form-select form-control form-select-lg mb-3">
+                                        <option>Type to search...</option>
+                                        <option value="Networking">Networking</option>
+                                        <option value="Hardware">Hardware</option>
+                                        <option value="Electrician">Electrician</option>
+                                        <option value="Television">Television</option>
+                                        <option value="AC">AC</option>
+                                    </select>
                                 </div>
                                 <div class="mb-2">
                                     <label for="expInput" class="form-label">Experience</label>
@@ -198,8 +214,11 @@
                                         <option value="10+ Years">
                                     </datalist>
                                 </div>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -251,8 +270,11 @@
                                         <option value="10+ Years">
                                     </datalist>
                                 </div>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -271,9 +293,9 @@
                         <div class="modal-body">
                             <form class="row">
                                 <div class="col-auto">
-                                    <label for="deletingUser">Are you Sure to delete user '...'?</label>
+                                    <label for="deletingUser">Are you Sure to delete user...?</label>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-12 text-center">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
                                     </button>
                                     <button type="submit" class="btn btn-primary">Delete</button>
@@ -285,7 +307,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-6 mt-5">
+                    <div class="col-6">
                         <div class="card">
                             <div class="card-header card-head">
                                 <h5 class="card-title">Technician Details</h5>
@@ -296,7 +318,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 mt-5">
+                    <div class="col-6">
                         <div class="card">
                             <div class="card-header card-head">
                                 <h5 class="card-title">Technician Details</h5>
@@ -307,7 +329,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 mt-5">
+                    <div class="col-6">
                         <div class="card">
                             <div class="card-header card-head">
                                 <h5 class="card-title">Technician Details</h5>
@@ -318,7 +340,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 mt-5">
+                    <div class="col-6">
                         <div class="card">
                             <div class="card-header card-head">
                                 <h5 class="card-title">Technician's Quaterly ticket counts</h5>
@@ -332,7 +354,27 @@
                 </div>
             </div>
         </div>
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row text-muted">
+                    <div class="col-6">
+                        <ul class="list-nostyle">
+                            <li class="list-nostyle-item"><a class="text-muted" href="#">Support</a></li>
+                            <li class="list-nostyle-item"><a class="text-muted" href="#">Help Center</a></li>
+                            <li class="list-nostyle-item"><a class="text-muted" href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 text-end">
+                        <p class="mb-0">
+                            &#169; 2021 - <a href="index.html" class="text-muted">TAMS</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <!-- Bootstrap 5 Javascript -->
     <script src="assets/js/vendor/bootstrap.bundle.min.js" type="text/javascript"></script>

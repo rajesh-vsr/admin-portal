@@ -17,37 +17,45 @@
 </head>
 
 <body>
-    <div class="container text-center">
+    <div class="container login-box">
         <div class="row">
-            <div class="col">
-                <h1>Welcome back, Rajesh</h1>
-                <h4>Sign in to your account to continue</h4>
-                <h5>New User? <a href="sign-up.html">Sign up here</a></h5>
+            <div class="col-6 mx-auto">
+                <div class="login-title text-center mt-4">
+                    <!-- User name and user image will be updated dynamically.-->
+                    <h1>Welcome back, Rajesh</h1> 
+                    <p class="lead sub-title">Sign in to your account to continue</p>
+                    <p class="lead sub-title">New User? <a href="sign-up.html">Sign up here</a></p>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="login-body m-4">
+                            <div class="text-center">
+                                <img class="imgLogin" src="assets/img/bwpotrait.jpeg" alt="rajesh's potrait"></img>
+                            </div>
+                            <!-- Change the user menu dropdown menu links in all the internal pages like it is in Technician page. -->
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email-address" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email-address"
+                                        placeholder="Enter Your Mail">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Enter Password ">
+                                    <small class="login-links"><a href="forgot-password.html">Forgot Password?</a></small>
+                                </div>
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Remember me next time
+                                </label>
+                                <div class="col-auto text-center">
+                                    <a href="dashboard.html" type="submit" class="btn btn-login btn-primary">Sign In</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div>
-                <img class="imgLogin" src="assets/img/potrait.jpg" alt="rajesh's potrait"></img>
-            </div>
-            <!-- Change the user menu dropdown menu links in all the internal pages like it is in Technician page. -->
-            <form>
-                <div>
-                    <label for="email-address" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email-address" placeholder="">
-                </div>
-                <div>
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password">
-                    <a href="forgot-password.html">Forgot Password?</a>
-                </div>
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Remember me next time
-                </label>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary">Sign In</button>
-                </div>
-            </form>
         </div>
     </div>
 
