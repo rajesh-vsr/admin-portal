@@ -168,8 +168,8 @@ h6 {
     color: #ced4da;
     background: transparent;
   }
-  .sidebar-item{
-    .active{
+  .sidebar-item {
+    .active {
       color: #e9ecefbf;
     }
   }
@@ -191,15 +191,16 @@ h6 {
   padding-left: 260px;
   background: #f7f9fc;
   .content {
-    min-height: calc(100vh - 124px); 
+    min-height: calc(100vh - 124px);
     direction: ltr;
     flex: 1;
-    padding: 40px 40px 24px;
+    padding: 24px;
   }
   .card-title {
     color: #495057;
     font-size: 0.95rem;
     font-weight: 500;
+    margin-top: 7px;
   }
   h1 {
     background: #fff;
@@ -304,6 +305,7 @@ h6 {
     .userName {
       color: #293042;
       font-size: 13px;
+      display: none;
     }
   }
   .dropdown-menu {
@@ -348,6 +350,28 @@ h6 {
 .table tbody tr td {
   vertical-align: middle;
 }
+.table {
+  color: #6c757d;
+  thead,
+  tbody {
+    tr {
+      th,
+      td {
+        vertical-align: middle;
+        padding: 10px 14px;
+      }
+      .field-hide {
+        display: none;
+      }
+    }
+  }
+}
+.table {
+  .odd {
+    background-color: #f4f7f9;
+    color: #6c757d;
+  }
+}
 .card-head,
 .card-body,
 .card-footer {
@@ -372,24 +396,57 @@ h6 {
 .list-nostyle-item:not(:last-child) {
   margin-right: 0.5rem;
 }
-.table {
-  color: #6c757d;
-  thead,
-  tbody {
-    tr {
-      th,
-      td {
-        vertical-align: middle;
-        padding: 12px 20px;
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (max-width: 993px) {
+  .l-side {
+    display: none;
+  }
+  .r-side {
+    padding-left: 0;
+    .search-box {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .table {
+    color: #6c757d;
+    thead,
+    tbody {
+      tr {
+        th,
+        td {
+          vertical-align: middle;
+          padding: 12px 20px;
+        }
       }
     }
   }
 }
-.table {
-  .odd {
-    background-color: #f4f7f9;
-    color: #6c757d;
+@media (min-width: 993px) {
+  .navbar {
+    .dropdown {
+      .userName {
+        display: inline-block;
+      }
+    }
+  }
+  .r-side {
+    .content {
+      padding: 40px 40px 24px;
+    }
+  }
+  .table {
+    thead,
+    tbody {
+      tr {
+        .field-hide {
+          display: table-cell;
+        }
+      }
+    }
   }
 }
-/* RESPONSIVE CSS
--------------------------------------------------- */

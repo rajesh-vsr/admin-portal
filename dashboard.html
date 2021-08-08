@@ -32,11 +32,11 @@
                     <i class="bi bi-file-earmark-bar-graph icons"></i><span>Dashboard</span></a></li>
             <li><a class="sidebar-link" href="org-admin.html"><i class="bi bi-person-lines-fill icons"></i>
                     <span>Admin (Organisation)</span></a></li>
-            <li><a class="sidebar-link" href="locations.html"><i class="bi bi-geo-fill icons"></i>
+            <li class="sidebar-item"><a class="sidebar-link" href="locations.html"><i class="bi bi-geo-fill icons"></i>
                     <span>Locations</span></a></li>
             <li class="sidebar-item"><a class="sidebar-link" href="manager.html">
                     <i class="bi bi-person icons"></i><span>Manager</span></a></li>
-            <li><a class="sidebar-link" href="technician.html"><i class="bi bi-tools icons"></i>
+            <li class="sidebar-item"><a class="sidebar-link" href="technician.html"><i class="bi bi-tools icons"></i>
                     <span>Technicians</span></a>
             </li>
             <!-- <li><a class="sidebar-link" href="index.html">Login</a></li>
@@ -90,10 +90,10 @@
         <div class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 p-0">
                         <div class="card">
                             <div class="card-header card-head">
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between mt-2">
                                     <h1 class="card-title text-left">Technician Details</h1>
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#addnewuserModal">
@@ -105,66 +105,70 @@
                             <div class="card-body">
                                 <div>
                                     <table class="table">
-                                        <tr class="tb-header">
-                                            <th>S.No</th>
-                                            <th>Name</th>
-                                            <th>Employeed ID</th>
-                                            <th>Skillset</th>
-                                            <th>Experience</th>
-                                            <th>Action</th>
-                                        </tr>
-                                        <tr>
-                                            <td>10201</td>
-                                            <td>Vishva</td>
-                                            <td>639180</td>
-                                            <td>Networking</td>
-                                            <td>2 Yrs</td>
-                                            <td class="table-action">
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
-                                                    <i class="bi bi-pencil"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
-                                                    <i class="bi bi-trash"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>10202</td>
-                                            <td>Kannan</td>
-                                            <td>639182</td>
-                                            <td>Hardware</td>
-                                            <td>4 Yrs</td>
-                                            <td class="table-action">
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
-                                                    <i class="bi bi-pencil"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
-                                                    <i class="bi bi-trash"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>10203</td>
-                                            <td>Aravind</td>
-                                            <td>639185</td>
-                                            <td>Electrician</td>
-                                            <td>8 Yrs</td>
-                                            <td class="table-action">
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
-                                                    <i class="bi bi-pencil"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
-                                                    <i class="bi bi-trash"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>10204</td>
-                                            <td>Deb</td>
-                                            <td>639187</td>
-                                            <td>Television</td>
-                                            <td>1 Yr</td>
-                                            <td class="table-action">
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
-                                                    <i class="bi bi-pencil"></i></a>
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
-                                                    <i class="bi bi-trash"></i></a>
-                                            </td>
-                                        </tr>
+                                        <thead>
+                                            <tr class="tb-header">
+                                                <th class="field-hide">S.No</th>
+                                                <th>Name</th>
+                                                <th>Employeed ID</th>
+                                                <th class="field-hide d-md-table-cell">Skillset</th>
+                                                <th class="field-hide">Experience</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="field-hide">10201</td>
+                                                <td>Vishva</td>
+                                                <td>639180</td>
+                                                <td class="field-hide d-md-table-cell">Networking</td>
+                                                <td class="field-hide">2 Yrs</td>
+                                                <td class="table-action">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
+                                                        <i class="bi bi-pencil"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
+                                                        <i class="bi bi-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="field-hide">10202</td>
+                                                <td>Kannan</td>
+                                                <td>639182</td>
+                                                <td class="field-hide d-md-table-cell">Hardware</td>
+                                                <td class="field-hide">4 Yrs</td>
+                                                <td class="table-action">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
+                                                        <i class="bi bi-pencil"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
+                                                        <i class="bi bi-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="field-hide">10203</td>
+                                                <td>Aravind</td>
+                                                <td>639185</td>
+                                                <td class="field-hide d-md-table-cell">Electrician</td>
+                                                <td class="field-hide">8 Yrs</td>
+                                                <td class="table-action">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
+                                                        <i class="bi bi-pencil"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
+                                                        <i class="bi bi-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="field-hide">10204</td>
+                                                <td>Deb</td>
+                                                <td>639187</td>
+                                                <td class="field-hide d-md-table-cell">Television</td>
+                                                <td class="field-hide">1 Yr</td>
+                                                <td class="table-action">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editUser">
+                                                        <i class="bi bi-pencil"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteUser">
+                                                        <i class="bi bi-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -307,7 +311,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 p-0 pe-lg-2">
                         <div class="card">
                             <div class="card-header card-head">
                                 <h5 class="card-title">Technician Details</h5>
@@ -318,7 +322,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 p-0 ps-lg-2">
                         <div class="card">
                             <div class="card-header card-head">
                                 <h5 class="card-title">Technician Details</h5>
@@ -329,7 +333,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 p-0 pe-lg-2">
                         <div class="card">
                             <div class="card-header card-head">
                                 <h5 class="card-title">Technician Details</h5>
@@ -340,7 +344,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6 p-0 ps-lg-2">
                         <div class="card">
                             <div class="card-header card-head">
                                 <h5 class="card-title">Technician's Quaterly ticket counts</h5>
@@ -379,6 +383,11 @@
     <!-- Bootstrap 5 Javascript -->
     <script src="assets/js/vendor/bootstrap.bundle.min.js" type="text/javascript"></script>
     <script src="assets/js/vendor/echarts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $('.sidebar-toggle').click(function () {
+            $('.l-side').hide();
+        });
+    </script>
     <script type="text/javascript">
         // based on prepared DOM, initialize echarts instance
         var myBarChart = echarts.init(document.getElementById('bar-main'));
@@ -489,9 +498,9 @@
 
         // Line-chart item and data
         var optionLine = {
-            title: {
-                text: 'Ex Text'
-            },
+            // title: {
+            //     text: 'Ex Text'
+            // },
             tooltip: {
                 trigger: 'axis'
             },
